@@ -1,6 +1,7 @@
 import pygame
 import sys
-from grid import grid
+from grid import Grid
+from block import *
 
 # initilise pygame
 pygame.init()
@@ -18,7 +19,7 @@ pygame.display.set_caption("Tetris")
 clock = pygame.time.Clock()
 
 # creating a grid object
-grid_game = grid()
+grid_game = Grid()
 
 while True:
     # all the vent handling in the game

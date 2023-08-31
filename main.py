@@ -1,5 +1,6 @@
 import pygame
 import sys
+from grid import grid
 
 # initilise pygame
 pygame.init()
@@ -16,6 +17,9 @@ pygame.display.set_caption("Tetris")
 # clock object
 clock = pygame.time.Clock()
 
+# creating a grid object
+grid_game = grid()
+
 while True:
     # all the vent handling in the game
     for event in pygame.event.get():
@@ -26,5 +30,6 @@ while True:
     
     # drawing
     screen.fill(purple_shade_1)
+    grid_game.draw(screen) # drawing the cells
     pygame.display.update()
     clock.tick(60) # all the code inside while loop will run 60 time per second
